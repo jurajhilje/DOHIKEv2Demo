@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a demo project containing use of two different features from Apple's Network Extension framework:
+This is a demo project using two different features from Apple's Network Extension framework:
 
 1.  #### `NEVPNManager`  
     An object to create and manage a Personal VPN configuration.  
@@ -10,7 +10,7 @@ This is a demo project containing use of two different features from Apple's Net
     [https://developer.apple.com/documentation/networkextension/nevpnmanager](https://developer.apple.com/documentation/networkextension/nevpnmanager)  
 
 2.  #### `NEDNSSettingsManager`  
-    An object you use to create and manage a DNS settings configuration..  
+    An object you use to create and manage a DNS settings configuration.  
     More info:  
     [https://developer.apple.com/documentation/networkextension/nednssettingsmanager](https://developer.apple.com/documentation/networkextension/nednssettingsmanager)  
 
