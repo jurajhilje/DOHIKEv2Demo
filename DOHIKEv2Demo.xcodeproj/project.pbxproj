@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6483BA4EA6959D6D97D2771B /* Pods_DOHIKEv2Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C98FE061D9EE0A436917F73 /* Pods_DOHIKEv2Demo.framework */; };
 		82FA189D25DFBC9F003D57F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA189C25DFBC9F003D57F9 /* AppDelegate.swift */; };
 		82FA189F25DFBC9F003D57F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA189E25DFBC9F003D57F9 /* SceneDelegate.swift */; };
 		82FA18A125DFBC9F003D57F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA18A025DFBC9F003D57F9 /* ViewController.swift */; };
@@ -16,9 +17,12 @@
 		82FA18B225DFBD1D003D57F9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA18B125DFBD1D003D57F9 /* Config.swift */; };
 		82FA18B625DFBDF9003D57F9 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA18B525DFBDF9003D57F9 /* VPNManager.swift */; };
 		82FA18BD25DFBE2D003D57F9 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FA18BC25DFBE2D003D57F9 /* NetworkExtension.framework */; };
+		82FA18C425DFC789003D57F9 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA18C325DFC789003D57F9 /* KeyChain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ED9E2D220313DB062D7985C /* Pods-DOHIKEv2Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOHIKEv2Demo.debug.xcconfig"; path = "Target Support Files/Pods-DOHIKEv2Demo/Pods-DOHIKEv2Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		5C98FE061D9EE0A436917F73 /* Pods_DOHIKEv2Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DOHIKEv2Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FA189925DFBC9F003D57F9 /* DOHIKEv2Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOHIKEv2Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FA189C25DFBC9F003D57F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82FA189E25DFBC9F003D57F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 		82FA18B525DFBDF9003D57F9 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
 		82FA18BA25DFBE2D003D57F9 /* DOHIKEv2Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DOHIKEv2Demo.entitlements; sourceTree = "<group>"; };
 		82FA18BC25DFBE2D003D57F9 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		82FA18C325DFC789003D57F9 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		9F8301D19178F8AFF6DF56AE /* Pods-DOHIKEv2Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOHIKEv2Demo.release.xcconfig"; path = "Target Support Files/Pods-DOHIKEv2Demo/Pods-DOHIKEv2Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +45,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				82FA18BD25DFBE2D003D57F9 /* NetworkExtension.framework in Frameworks */,
+				6483BA4EA6959D6D97D2771B /* Pods_DOHIKEv2Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AE16C954B3E2AF056AB1DA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E2D220313DB062D7985C /* Pods-DOHIKEv2Demo.debug.xcconfig */,
+				9F8301D19178F8AFF6DF56AE /* Pods-DOHIKEv2Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		82FA189025DFBC9F003D57F9 = {
 			isa = PBXGroup;
 			children = (
 				82FA189B25DFBC9F003D57F9 /* DOHIKEv2Demo */,
 				82FA189A25DFBC9F003D57F9 /* Products */,
 				82FA18BB25DFBE2D003D57F9 /* Frameworks */,
+				2AE16C954B3E2AF056AB1DA9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,7 @@
 				82FA189E25DFBC9F003D57F9 /* SceneDelegate.swift */,
 				82FA18A025DFBC9F003D57F9 /* ViewController.swift */,
 				82FA18B125DFBD1D003D57F9 /* Config.swift */,
+				82FA18C325DFC789003D57F9 /* KeyChain.swift */,
 				82FA18B525DFBDF9003D57F9 /* VPNManager.swift */,
 				82FA18A225DFBC9F003D57F9 /* Main.storyboard */,
 				82FA18A525DFBCA4003D57F9 /* Assets.xcassets */,
@@ -83,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				82FA18BC25DFBE2D003D57F9 /* NetworkExtension.framework */,
+				5C98FE061D9EE0A436917F73 /* Pods_DOHIKEv2Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82FA18AD25DFBCA4003D57F9 /* Build configuration list for PBXNativeTarget "DOHIKEv2Demo" */;
 			buildPhases = (
+				628F30FBCD63F86D0F5CC6FA /* [CP] Check Pods Manifest.lock */,
 				82FA189525DFBC9F003D57F9 /* Sources */,
 				82FA189625DFBC9F003D57F9 /* Frameworks */,
 				82FA189725DFBC9F003D57F9 /* Resources */,
+				FFC587529F6602FEB4E5C39D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,12 +173,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		628F30FBCD63F86D0F5CC6FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DOHIKEv2Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC587529F6602FEB4E5C39D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DOHIKEv2Demo/Pods-DOHIKEv2Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DOHIKEv2Demo/Pods-DOHIKEv2Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DOHIKEv2Demo/Pods-DOHIKEv2Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82FA189525DFBC9F003D57F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				82FA18A125DFBC9F003D57F9 /* ViewController.swift in Sources */,
+				82FA18C425DFC789003D57F9 /* KeyChain.swift in Sources */,
 				82FA18B225DFBD1D003D57F9 /* Config.swift in Sources */,
 				82FA18B625DFBDF9003D57F9 /* VPNManager.swift in Sources */,
 				82FA189D25DFBC9F003D57F9 /* AppDelegate.swift in Sources */,
@@ -305,6 +369,7 @@
 		};
 		82FA18AE25DFBCA4003D57F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED9E2D220313DB062D7985C /* Pods-DOHIKEv2Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +390,7 @@
 		};
 		82FA18AF25DFBCA4003D57F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8301D19178F8AFF6DF56AE /* Pods-DOHIKEv2Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

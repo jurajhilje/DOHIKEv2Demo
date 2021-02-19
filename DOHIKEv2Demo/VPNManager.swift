@@ -38,9 +38,9 @@ class VPNManager {
         let configuration = NEVPNProtocolIKEv2()
         configuration.remoteIdentifier = Config.vpnGateway
         configuration.serverAddress = Config.vpnGateway
-        configuration.localIdentifier = Config.vpnUsername
-        configuration.username = Config.vpnUsername
-        configuration.passwordReference = Config.vpnPassword.data(using: .utf8)
+        configuration.localIdentifier = KeyChain.vpnUsername
+        configuration.username = KeyChain.vpnUsername
+        configuration.passwordReference = KeyChain.vpnPasswordRef
         configuration.authenticationMethod = .none
         configuration.useExtendedAuthentication = true
         configuration.disconnectOnSleep = false
