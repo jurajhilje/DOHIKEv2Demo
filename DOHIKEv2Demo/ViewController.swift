@@ -7,15 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: - @IBActions -
+    
+    @IBAction func connect(_ sender: UIButton) {
+        VPNManager.shared.connect()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        VPNManager.shared.connect()
+    @IBAction func disconnect(_ sender: UIButton) {
+        VPNManager.shared.disconnect()
     }
     
 }

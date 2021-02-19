@@ -19,17 +19,25 @@ class VPNManager {
     // MARK: - Methods -
     
     func connect() {
-        setupVPNManager {
-            do {
-                try self.manager.connection.startVPNTunnel()
-            } catch let error as NSError {
-                print("Error connecting to VPN: \(error.localizedDescription)")
+        setupVPNManager { error in
+            guard error == nil else {
+                print("Error saving VPN configuration")
+                return
+            }
+            
+            self.manager.loadFromPreferences { _ in
+                do {
+                    try self.manager.connection.startVPNTunnel()
+                } catch let error as NSError {
+                    print("Error connecting to VPN: \(error.localizedDescription)")
+                }
             }
         }
     }
     
     func disconnect() {
         manager.connection.stopVPNTunnel()
+        removeOnDemandRule()
     }
     
     // MARK: - Private methods -
@@ -62,15 +70,20 @@ class VPNManager {
         manager.isEnabled = true
     }
     
-    private func setupVPNManager(completion: @escaping () -> ()) {
-        setupVPNConfiguration()
-        manager.saveToPreferences { _ in
-            self.manager.loadFromPreferences { _ in
-                self.setupVPNConfiguration()
-                self.manager.saveToPreferences { _ in
-                    completion()
-                }
+    private func setupVPNManager(completion: @escaping (Error?) -> Void) {
+        manager.loadFromPreferences { _ in
+            self.setupVPNConfiguration()
+            self.manager.saveToPreferences { error in
+                completion(error)
             }
+        }
+    }
+    
+    private func removeOnDemandRule() {
+        manager.loadFromPreferences { _ in
+            self.manager.onDemandRules = []
+            self.manager.isOnDemandEnabled = false
+            self.manager.saveToPreferences { _ in }
         }
     }
     
