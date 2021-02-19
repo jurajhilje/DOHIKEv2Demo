@@ -40,6 +40,10 @@ class VPNManager {
         removeOnDemandRule()
     }
     
+    func removeProfile() {
+        manager.removeFromPreferences { _ in }
+    }
+    
     // MARK: - Private methods -
     
     private func setupVPNConfiguration() {

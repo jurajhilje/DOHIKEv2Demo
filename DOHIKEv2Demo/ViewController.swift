@@ -19,4 +19,16 @@ class ViewController: UITableViewController {
         VPNManager.shared.disconnect()
     }
     
+    @IBAction func removeVPNProfile(_ sender: UIButton) {
+        VPNManager.shared.removeProfile()
+    }
+    
+    @IBAction func saveDNSProfile(_ sender: UIButton) {
+        DNSManager.shared.saveProfile { _ in }
+    }
+    
+    @IBAction func removeDNSProfile(_ sender: UIButton) {
+        DNSManager.shared.removeProfile { _ in }
+    }
+    
 }

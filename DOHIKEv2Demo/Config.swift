@@ -15,4 +15,9 @@ struct Config {
     static let vpnUsername = ""
     static let vpnPassword = ""
     
+    // MARK: - DNS over HTTPS -
+    
+    static let dnsIpAddress = ""
+    static let dnsServerURL = ""
+    
 }
