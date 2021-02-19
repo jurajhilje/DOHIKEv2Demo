@@ -55,7 +55,6 @@ class VPNManager {
         configuration.passwordReference = KeyChain.vpnPasswordRef
         configuration.authenticationMethod = .none
         configuration.useExtendedAuthentication = true
-        configuration.disconnectOnSleep = false
         
         // Child IPSec security associations to be negotiated for each IKEv2 policy
         configuration.childSecurityAssociationParameters.encryptionAlgorithm = .algorithmAES256 // AES_CBC_256
